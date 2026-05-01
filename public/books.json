@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "The Silent Shadows",
+    "author": "Elena Vance",
+    "description": "A gripping story of mystery and intrigue in a small coastal town where secrets buried for decades begin to surface.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1543004457-450c18cb634d?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "2",
+    "title": "Quantum Leap: Future Tech",
+    "author": "Dr. Marcus Thorne",
+    "description": "An exploration into the next frontier of quantum computing and how it will revolutionize the world as we know it.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "3",
+    "title": "Cosmic Wonders",
+    "author": "Sarah Jenkins",
+    "description": "Journey through the galaxies and discover the hidden wonders of the universe, from black holes to nebula clouds.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "4",
+    "title": "The Last Kingdom",
+    "author": "Robert Black",
+    "description": "An epic tale of a forgotten kingdom and the heroes who rose to defend it against an ancient evil.",
+    "category": "Story",
+    "available_quantity": 2,
+    "image_url": "https://images.unsplash.com/photo-1532012197367-9320672460c1?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "5",
+    "title": "AI: The New Era",
+    "author": "Lisa Chen",
+    "description": "Deep dive into the world of Artificial Intelligence, its ethical implications, and its role in shaping the future.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "6",
+    "title": "Genetic Code: Decoded",
+    "author": "Michael Ross",
+    "description": "Understanding the blueprint of life and how genetic engineering is paving the way for medical breakthroughs.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "7",
+    "title": "Whispers of the Wind",
+    "author": "Clara Moone",
+    "description": "A poetic journey through the landscapes of the heart, exploring themes of love, loss, and redemption.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "8",
+    "title": "Cybersecurity Essentials",
+    "author": "Kevin Mitnick",
+    "description": "A comprehensive guide to protecting your digital life in an increasingly connected and vulnerable world.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "9",
+    "title": "The Mars Mission",
+    "author": "Elon Musk (Fictional)",
+    "description": "The technical and human challenges of establishing the first human colony on the Red Planet.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://images.unsplash.com/photo-1614728263952-84ea206f25bc?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "10",
+    "title": "Beyond the Horizon",
+    "author": "James Peterson",
+    "description": "A sci-fi adventure that takes you to the edge of the known universe and back.",
+    "category": "Story",
+    "available_quantity": 1,
+    "image_url": "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "11",
+    "title": "Web3 Revolution",
+    "author": "Alice Web",
+    "description": "Understanding decentralization, blockchain, and the next evolution of the internet.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    "id": "12",
+    "title": "The Particle Zoo",
+    "author": "Richard Feynman (Fictional)",
+    "description": "A beginner's guide to subatomic particles and the fundamental forces of nature.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=400"
+  }
+]
