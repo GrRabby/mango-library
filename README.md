@@ -6,9 +6,9 @@
 [![BetterAuth](https://img.shields.io/badge/BetterAuth-Secure-blueviolet?style=for-the-badge)](https://www.better-auth.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-![Mango Library Hero](./public/assets/hero.png)
+![Mango Library Hero](<img width="1919" height="945" alt="Screenshot 2026-05-03 032208" src="https://github.com/user-attachments/assets/0f89c4ca-e1ac-473e-875c-79e6618e42a2" />)
 
-Mango Library is a premium, high-performance digital library platform built with the modern web stack. It digitizes the traditional library experience, offering users a seamless way to browse, search, and borrow books with a stunning user interface.
+, high-performance digital library platform built with the modern web stack. It digitizes the traditional library experience, offering users a seamless way to browse, search, and borrow books with a stunning user interface.
 
 ## ✨ Key Features
 
