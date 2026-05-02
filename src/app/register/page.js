@@ -13,6 +13,7 @@ export default function Register() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [socialLoading, setSocialLoading] = useState(false);
+    const [serverError, setServerError] = useState("");
     const {
             register,
             handleSubmit,
@@ -30,6 +31,7 @@ export default function Register() {
 
             if (error) {
                 toast.error(error.message || "Registration failed");
+                setServerError(error.message || "Registration failed");
             } else {
                 toast.success("Account created! Please login.");
                 router.push("/login");
@@ -130,6 +132,11 @@ export default function Register() {
                             </div>
                             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
                         </fieldset>
+                        {serverError && (
+                            <p className="text-red-500 text-sm mt-2 text-center">
+                                {serverError}
+                            </p>
+                        )}
                         <button
                             type="submit"
                             className={`btn btn-primary h-14 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 mt-4 ${loading ? "pointer-events-none" : ""}`}

@@ -13,6 +13,7 @@ export default function Login() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [socialLoading, setSocialLoading] = useState(false);
+    const [serverError, setServerError] = useState("");
     const {
         register,
         handleSubmit,
@@ -29,6 +30,7 @@ export default function Login() {
 
             if (error) {
                 toast.error(error.message || "Invalid credentials");
+                setServerError(error.message || "Invalid credentials");
             } else {
                 toast.success(`Welcome back! ${data?.user?.name || "Reader"}`);
                 router.push("/");
@@ -140,6 +142,11 @@ export default function Login() {
                                 </>
                             )}
                         </button>
+                        {serverError && (
+                            <p className="text-red-500 text-sm mt-2 text-center">
+                                {serverError}
+                            </p>
+                        )}
                     </form>
 
                     <div className="divider my-8 opacity-60">OR LOGIN WITH</div>
@@ -151,7 +158,7 @@ export default function Login() {
                         {socialLoading ? <span className="loading loading-spinner text-primary-content"></span> : (
                             <>
                                 <FcGoogle size={20} />
-                                Register with Google
+                                Login with Google
                             </>
                         )}
                     </button>
