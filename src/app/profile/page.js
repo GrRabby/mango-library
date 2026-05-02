@@ -133,7 +133,7 @@ export default function Profile() {
                                 Borrowing Stats
                             </h3>
                             
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10 text-center">
                                     <div className="text-3xl font-black text-primary mb-1">12</div>
                                     <div className="text-xs opacity-60 font-bold uppercase">Borrowed</div>
