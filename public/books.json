@@ -6,7 +6,7 @@
     "description": "A gripping story of mystery and intrigue in a small coastal town where secrets buried for decades begin to surface.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "https://images.unsplash.com/photo-1543004457-450c18cb634d?auto=format&fit=crop&q=80&w=400"
+    "image_url": "https://m.media-amazon.com/images/I/61yzF-2LdLL._AC_UF1000,1000_QL80_.jpg"
   },
   {
     "id": "2",
@@ -29,11 +29,11 @@
   {
     "id": "4",
     "title": "The Last Kingdom",
-    "author": "Robert Black",
+    "author": "Bernard Cornwell",
     "description": "An epic tale of a forgotten kingdom and the heroes who rose to defend it against an ancient evil.",
     "category": "Story",
     "available_quantity": 2,
-    "image_url": "https://images.unsplash.com/photo-1532012197367-9320672460c1?auto=format&fit=crop&q=80&w=400"
+    "image_url": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1407107780i/68527.jpg"
   },
   {
     "id": "5",
