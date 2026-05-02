@@ -6,10 +6,11 @@ import {  toast, ToastContainer } from 'react-toastify';
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { User, Mail, Lock, Image as ImageIcon, UserPlus, Globe, ArrowRight, Book } from "lucide-react";
-import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 export default function Register() {
+    const router = useRouter();
     const [loading, setLoading] = useState(false);
     const {
             register,
@@ -25,16 +26,16 @@ export default function Register() {
                 name: data.name,
                 image: data.photoUrl,
             });
-            console.log(data.photoUrl)
 
             if (error) {
                 toast.error(error.message || "Registration failed");
             } else {
                 toast.success("Account created! Please login.");
-                navigate("/login")
+                router.push("/login");
             }
         } catch (err) {
             toast.error("An unexpected error occurred");
+            
         } finally {
             setLoading(false);
         }
@@ -183,7 +184,6 @@ export default function Register() {
                     </div>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 }

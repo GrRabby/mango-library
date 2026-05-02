@@ -7,9 +7,10 @@ import {  toast, ToastContainer } from 'react-toastify';
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import { Mail, Lock, LogIn, ArrowRight, Book } from "lucide-react";
-import { navigate } from "next/dist/client/components/segment-cache/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+    const router = useRouter();
     const [loading, setLoading] = useState(false);
     const {
         register,
@@ -23,14 +24,13 @@ export default function Login() {
                 email: signinData.email,
                 password: signinData.password,
                 rememberMe: true,
-                callbackURL: "/",
             });
 
             if (error) {
                 toast.error(error.message || "Invalid credentials");
             } else {
                 toast.success("Welcome back! Logging you in...");
-                navigate("/")
+                router.push("/");
             }
         } catch (err) {
             toast.error("An unexpected error occurred");
@@ -151,7 +151,6 @@ export default function Login() {
                     </p>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 }
