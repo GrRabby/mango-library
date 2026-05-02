@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { Book, LogIn, LogOut, Menu, User } from "lucide-react";
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import { authClient } from '@/lib/auth-client';
 const NavBar = () => {
     const { data: session, isPending } = authClient.useSession();

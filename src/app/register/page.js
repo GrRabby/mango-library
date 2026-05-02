@@ -126,14 +126,16 @@ export default function Register() {
                             </div>
                             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
                         </fieldset>
-
-                        <button 
-                            type="submit" 
-                            className={`btn btn-primary h-14 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 mt-4 ${loading ? 'loading' : ''}`}
-                            disabled={loading}
+                        <button
+                            type="submit"
+                            className={`btn btn-primary h-14 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 mt-4 ${loading ? "pointer-events-none" : ""}`}
                         >
-                            {!loading && <UserPlus size={20} className="mr-2" />}
-                            {loading ? "Creating Account..." : "Create Free Account"}
+                            {loading ? <span className="loading loading-spinner text-primary-content"></span> : (
+                                <>
+                                    <UserPlus size={20} />
+                                    Create Free Account
+                                </>
+                            )}
                         </button>
                     </form>
 

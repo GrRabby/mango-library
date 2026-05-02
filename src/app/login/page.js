@@ -125,14 +125,16 @@ export default function Login() {
                             </div>
                             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
                         </fieldset>
-
-                        <button 
-                            type="submit" 
-                            className={`btn btn-primary h-14 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 mt-4 ${loading ? 'loading' : ''}`}
-                            disabled={loading}
+                        <button
+                            type="submit"
+                            className={`btn btn-primary h-14 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 mt-4 ${loading ? "pointer-events-none" : ""}`}
                         >
-                            {!loading && <LogIn size={20} className="mr-2" />}
-                            {loading ? "Verifying..." : "Login to Account"}
+                            {loading ? <span className="loading loading-spinner text-primary-content"></span> : (
+                                <>
+                                    <LogIn size={20} />
+                                    Login to Account
+                                </>
+                            )}
                         </button>
                     </form>
 
