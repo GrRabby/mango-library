@@ -31,7 +31,7 @@ const BookCard = ({ book }) => {
                 <div className="card-actions justify-between items-center mt-4">
                     <div className="flex items-center gap-1.5 text-xs font-semibold">
                         <div className={`w-2 h-2 rounded-full ${book.available_quantity > 0 ? "bg-success" : "bg-error"}`}></div>
-                        <span>{book.available_quantity} copies left</span>
+                        <span>{book.available_quantity} copies left </span>
                     </div>
                     <Link href={`/book/${book.id}`} className="btn btn-primary btn-sm rounded-lg flex items-center gap-2">
                         <BookOpen size={14} />
