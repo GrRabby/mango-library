@@ -5,7 +5,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from 'sonner';
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
-import { User, Mail, Lock, Image as ImageIcon, UserPlus, Globe, ArrowRight, Book } from "lucide-react";
+import { User, Mail, Lock, Image as ImageIcon, UserPlus, Globe, ArrowRight, Book, EyeOff, Eye } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
@@ -14,6 +14,7 @@ export default function Register() {
     const [loading, setLoading] = useState(false);
     const [socialLoading, setSocialLoading] = useState(false);
     const [serverError, setServerError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const {
             register,
             handleSubmit,
@@ -124,11 +125,19 @@ export default function Register() {
                                     <Lock size={18} />
                                 </div>
                                 <input 
-                                    type="password" 
+                                    type={showPassword ? "text" : "password"}
                                     placeholder="••••••••" 
                                     className="input input-bordered w-full pl-12 h-14 rounded-xl focus:border-primary transition-all"
                                     {...register("password", { required: "Password is required" })}
                                 />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword((prev) => !prev)}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary"
+                                    tabIndex={-1}
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
                             </div>
                             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
                         </fieldset>
