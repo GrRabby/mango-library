@@ -23,7 +23,7 @@ export default function Banner() {
         {
             title: "Explore the Frontiers of Science.",
             desc: "From the cosmic wonders of the universe to the genetic blueprint of life.",
-            img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
+            img: "https://www.frostscience.org/wp-content/uploads/2024/02/Frost-Science-Journey-To-Space-2024-Exhibition-Page-Image--e1714676548156-1600x500.jpg"
         }
     ];
     return (

@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🥭 Mango Library - Modern Online Book Borrowing Platform
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Latest-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+[![BetterAuth](https://img.shields.io/badge/BetterAuth-Secure-blueviolet?style=for-the-badge)](https://www.better-auth.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-First, run the development server:
+![Mango Library Hero](./public/assets/hero.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Mango Library is a premium, high-performance digital library platform built with the modern web stack. It digitizes the traditional library experience, offering users a seamless way to browse, search, and borrow books with a stunning user interface.
+
+## ✨ Key Features
+
+-   **🚀 High-Impact Visuals**: Immersive landing page featuring SwiperJS-powered banners and dynamic marquee animations.
+-   **🔍 Intelligent Search**: Real-time book discovery with instant search functionality.
+-   **📁 Category-Driven Navigation**: Easy-to-use filtering for Story, Tech, Science, and more.
+-   **🔐 Enterprise-Grade Auth**: Secure authentication powered by BetterAuth, featuring Google Social Login and Email/Password support.
+-   **👤 User Workspace**: Personalized profile management where users can update their identity and track activity.
+-   **📱 Edge-to-Edge Responsive**: Optimized for a flawless experience across mobile, tablet, and desktop devices.
+-   **🎨 Premium UI/UX**: Crafted with DaisyUI 5 and Lucide icons for a sleek, modern aesthetic.
+
+## 🛠️ Tech Stack
+
+-   **Frontend**: [Next.js 15](https://nextjs.org/) (App Router), [React 19](https://react.dev/)
+-   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/), [DaisyUI 5](https://daisyui.com/)
+-   **Authentication**: [BetterAuth](https://www.better-auth.com/)
+-   **Database**: [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/)
+-   **Animations**: [Animate.css](https://animate.style/), [SwiperJS](https://swiperjs.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Notifications**: [Sonner](https://sonner.emilkowal.ski/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+-   Node.js 18.x or later
+-   MongoDB Atlas account or local MongoDB instance
+-   Google Cloud Console account (for Social Login)
+
+### Installation
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/mango-library.git
+    cd mango-library
+    ```
+
+2. **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3. **Configure Environment Variables**
+    Create a `.env.local` file in the root directory:
+    ```env
+    MONGODB_URI=your_mongodb_connection_string
+    BETTER_AUTH_SECRET=your_auth_secret
+    BETTER_AUTH_URL=http://localhost:3000
+    GOOGLE_CLIENT_ID=your_google_id
+    GOOGLE_CLIENT_SECRET=your_google_secret
+    NEXT_PUBLIC_APP_URL=http://localhost:3000
+    ```
+
+4. **Run the development server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/            # Next.js App Router (Pages & Layouts)
+├── components/     # Reusable UI Components
+├── data/           # Static data and mock JSONs
+├── lib/            # Shared utilities and configurations
+├── models/         # Mongoose schemas and models
+└── styles/         # Global styles and Tailwind configs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
+Distributed under the MIT License. See `LICENSE` for more information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center">
+  Built with ❤️ by the Mango Library Team
+</p>
