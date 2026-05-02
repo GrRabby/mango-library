@@ -11,11 +11,14 @@ export default function Profile() {
     const router = useRouter();
 
     useEffect(() => {
-        if (!isPending && !session) {
+        console.log("Session:", session, "Pending:", isPending);
+        if (!isPending && session === null) {
             router.push("/login");
         }
     }, [session, isPending, router]);
-
+    if (!session) {
+        return null;
+    }
     if (isPending) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -23,7 +26,6 @@ export default function Profile() {
             </div>
         );
     }
-
     const { user } = session;
 
     return (
