@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
-import {  toast, ToastContainer } from 'react-toastify';
+import { toast } from 'sonner';
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { User, Mail, Lock, Image as ImageIcon, UserPlus, Globe, ArrowRight, Book } from "lucide-react";

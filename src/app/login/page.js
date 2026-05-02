@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { authClient } from "@/lib/auth-client";
-import {  toast, ToastContainer } from 'react-toastify';
+import { toast } from 'sonner';
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import { Mail, Lock, LogIn, ArrowRight, Book } from "lucide-react";
