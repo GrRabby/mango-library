@@ -15,7 +15,7 @@ export default function BookDetails() {
     const { data: session, isPending } = authClient.useSession();
     const book = booksData.find(book => book.id === id);
     useEffect(() => {
-        if (!isPending && session === null) {
+        if (!isPending && !session) {
             router.replace("/login");
         }
     }, [session, isPending, router]);
