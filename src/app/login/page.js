@@ -6,7 +6,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from 'sonner';
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
-import { Mail, Lock, LogIn, ArrowRight, Book } from "lucide-react";
+import { Mail, Lock, LogIn, ArrowRight, Book, Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
@@ -14,6 +14,7 @@ export default function Login() {
     const [loading, setLoading] = useState(false);
     const [socialLoading, setSocialLoading] = useState(false);
     const [serverError, setServerError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const {
         register,
         handleSubmit,
@@ -122,12 +123,20 @@ export default function Login() {
                                     <Lock size={18} />
                                 </div>
                                 <input 
-                                    type="password" 
+                                    type={showPassword ? "text" : "password"}
                                     placeholder="••••••••" 
                                     {...register('password', { required: "Password is required" })}
                                     className="input input-bordered w-full pl-12 h-14 rounded-xl focus:border-primary transition-all"
                                     required
                                 />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword((prev) => !prev)}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary"
+                                    tabIndex={-1}
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
                             </div>
                             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
                         </fieldset>
