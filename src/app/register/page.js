@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 export default function Register() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
+    const [socialLoading, setSocialLoading] = useState(false);
     const {
             register,
             handleSubmit,
@@ -42,6 +43,7 @@ export default function Register() {
     };
 
     const handleSocialLogin = async () => {
+        setSocialLoading(true);
         try {
             await authClient.signIn.social({
                 provider: "google",
@@ -49,6 +51,8 @@ export default function Register() {
             });
         } catch (err) {
             toast.error("Social login failed");
+        } finally {
+            setSocialLoading(false);
         }
     };
 
@@ -143,10 +147,15 @@ export default function Register() {
 
                     <button 
                         onClick={handleSocialLogin}
-                        className="btn btn-outline h-14 rounded-xl gap-3 hover:bg-base-200 hover:text-base-content border-base-300"
+                        className={`btn btn-outline h-14 rounded-xl gap-3 hover:bg-primary/20 hover:text-base-content border-base-300 font-bold border-2 ${socialLoading ? "pointer-events-none" : ""}`}
                     >
-                        <FcGoogle size={20} />
-                        Register with Google
+                        
+                        {socialLoading ? <span className="loading loading-spinner text-primary-content"></span> : (
+                            <>
+                                <FcGoogle size={20} />
+                                Register with Google
+                            </>
+                        )}
                     </button>
 
                     <p className="text-center mt-10 font-medium flex items-center justify-center gap-1">

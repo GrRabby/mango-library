@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 export default function Login() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
+    const [socialLoading, setSocialLoading] = useState(false);
     const {
         register,
         handleSubmit,
@@ -29,7 +30,7 @@ export default function Login() {
             if (error) {
                 toast.error(error.message || "Invalid credentials");
             } else {
-                toast.success("Welcome back! Logging you in...");
+                toast.success(`Welcome back! ${data?.user?.name || "Reader"}`);
                 router.push("/");
             }
         } catch (err) {
@@ -40,6 +41,7 @@ export default function Login() {
     };
 
     const handleSocialLogin = async () => {
+        setSocialLoading(true);
         try {
             await authClient.signIn.social({
                 provider: "google",
@@ -47,6 +49,8 @@ export default function Login() {
             });
         } catch (err) {
             toast.error("Social login failed");
+        } finally {
+            setSocialLoading(false);
         }
     };
 
@@ -139,10 +143,17 @@ export default function Login() {
                     </form>
 
                     <div className="divider my-8 opacity-60">OR LOGIN WITH</div>
-
-                    <button onClick={handleSocialLogin}className="btn btn-outline h-14 rounded-xl gap-3 hover:bg-primary/20 hover:text-base-content border-base-300 font-bold border-2">
-                        <FcGoogle size={20}/>
-                        Continue with Google
+                    <button 
+                        onClick={handleSocialLogin}
+                        className={`btn btn-outline h-14 rounded-xl gap-3 hover:bg-primary/20 hover:text-base-content border-base-300 font-bold border-2 ${socialLoading ? "pointer-events-none" : ""}`}
+                    >
+                        
+                        {socialLoading ? <span className="loading loading-spinner text-primary-content"></span> : (
+                            <>
+                                <FcGoogle size={20} />
+                                Register with Google
+                            </>
+                        )}
                     </button>
 
                     <p className="text-center mt-10 font-medium flex items-center justify-center gap-1">

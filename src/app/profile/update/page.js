@@ -120,7 +120,7 @@ export default function UpdateProfile() {
                             </div>
                             {errors.image && <p className="text-red-600">{errors.image.message}</p>}
                             <label className="label">
-                                <span className="label-text-alt opacity-60">Paste a direct link to an image file</span>
+                                <span className="label-text-alt opacity-60">Paste a direct link to an image file (Live Preview)</span>
                             </label>
                         </div>
 
