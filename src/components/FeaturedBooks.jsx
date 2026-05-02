@@ -6,7 +6,7 @@ import booksData from "../../public/books.json";
 const FeaturedBooks = () => {
     const featuredBooks = booksData.slice(0, 4);
     return (
-        <div className="container mx-auto px-4 md:px-8">
+        <div id="featured" className="container mx-auto px-4 md:px-8 ">
             <div className="flex justify-between items-end mb-12">
                 <div>
                     <span className="text-primary font-bold tracking-widest uppercase text-sm">Handpicked</span>

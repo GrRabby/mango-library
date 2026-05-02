@@ -64,9 +64,9 @@ export default function Banner() {
                                             Browse Now
                                             <ArrowRight/>
                                         </Link>
-                                        <Link href="#featured" className="btn font-medium btn-soft opacity-80 btn-lg px-10 h-16 rounded-2xl shadow-2xl shadow-primary/30 text-lg border-2 border-primary/50 hover:bg-primary/10 hover:text-primary">
+                                        <a href="#featured" className="btn font-medium btn-soft opacity-80 btn-lg px-10 h-16 rounded-2xl shadow-2xl shadow-primary/30 text-lg border-2 border-primary/50 hover:bg-primary/10 hover:text-primary">
                                             See Featured
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

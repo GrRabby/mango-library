@@ -33,7 +33,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="container mx-auto px-4 md:px-8 pt-20">
+        <section className="container mx-auto px-4 md:px-8 pt-10">
             <div className="bg-primary rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-10 opacity-10">
                     <Layers size={300} />
