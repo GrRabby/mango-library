@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import Marquee from "@/components/Marquee";
 import FeaturedBooks from "@/components/FeaturedBooks";
 import { CircleCheck, Globe, Layers, Shield, Zap } from "lucide-react";
+import { ToastContainer } from "react-toastify";
 export default function Home() {
   return (
     <div className="flex flex-col gap-10 pb-20">
@@ -92,6 +93,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
+        <ToastContainer></ToastContainer>
     </div>
   );
 }
