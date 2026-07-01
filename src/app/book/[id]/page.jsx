@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import booksData from "../../../../public/books.json";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../../lib/auth-client";
 import { toast } from 'sonner';
 import { BookOpen, User, Info, ArrowLeft, BookmarkPlus, CircleCheck } from "lucide-react";
 import Link from "next/link";

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../lib/auth-client";
 import { toast } from 'sonner';
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";

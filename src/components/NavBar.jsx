@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Book, LogIn, LogOut, Menu, User } from "lucide-react";
 import { usePathname } from 'next/navigation';
-import { authClient } from '@/lib/auth-client';
+import { authClient } from '../lib/auth-client';
 const NavBar = () => {
     const { data: session, isPending } = authClient.useSession();
     const pathName = usePathname();

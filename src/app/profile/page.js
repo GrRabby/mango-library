@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../lib/auth-client";
 import Link from "next/link";
 import { User, Mail, Calendar, Edit, Shield, BookOpen, Clock, Settings } from "lucide-react";
 

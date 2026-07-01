@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 const client = new MongoClient(process.env.MONNGODB_URL);
-const db = client.db();
+const db = client.db("mango-library");
 export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,

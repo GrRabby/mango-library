@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../../lib/auth-client";
 import { toast } from "sonner";
 import Link from "next/link";
 import { User, Image as ImageIcon, Save, ArrowLeft, ShieldCheck } from "lucide-react";
